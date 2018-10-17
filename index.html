@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>echarts样例</title>
+  <meta charset="utf-8">
+  <script src="echarts.js"></script>
+  <script src="./js/aweek-time-axis.js"></script>
+  <script src="./js/annular-chart.js"></script>
+</head>
+<body>
+<div>
+  <div>X轴为显示一周的时间轴</div>
+  <div id="mainOne" style="width: 400px;height:300px;"></div>
+</div>
+<div>
+  <div>环形图</div>
+  <div id="mainTwo" style="width: 400px;height:400px;"></div>
+</div>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var Chart1 = echarts.init(document.getElementById('mainOne'));
+    var Chart2 = echarts.init(document.getElementById('mainTwo'));
+
+    Chart1.setOption(option1());
+    Chart2.setOption(option2());
+</script>
+</body>
+</html>
