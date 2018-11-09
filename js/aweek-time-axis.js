@@ -1,4 +1,5 @@
-function option1() {
+var funObj = []
+funObj[0] = function () {
     var data = [
         {name:'"2018-07-05 18:00:29"', value:["2018-07-05 18:00:29", 37]},
         {name:'2018-07-04 18:00:29', value:["2018-07-04 18:00:29", 36]},
@@ -13,7 +14,7 @@ function option1() {
         {name:'2018-07-08', value:['2018-07-08', 0]}
     ];
 // 指定图表的配置项和数据
-    option = {
+    var option = {
         backgroundColor: '#fff',//背景色
         grid: {
             left: 35,

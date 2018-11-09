@@ -6,24 +6,34 @@
   <script src="echarts.js"></script>
   <script src="./js/aweek-time-axis.js"></script>
   <script src="./js/annular-chart.js"></script>
+  <script src="./js/bar-stack-markLine.js"></script>
 </head>
 <body>
-<div>
+<div class="block">
   <div>X轴为显示一周的时间轴</div>
-  <div id="mainOne" style="width: 400px;height:300px;"></div>
+  <div id="main0" style="width: 400px;height:400px;"></div>
 </div>
-<div>
+<div class="block">
   <div>环形图</div>
-  <div id="mainTwo" style="width: 400px;height:400px;"></div>
+  <div id="main1" style="width: 400px;height:400px;"></div>
+</div>
+<div class="block">
+  <div>堆叠柱状图显示一条总平均线</div>
+  <div id="main2" style="width: 500px;height:400px;"></div>
 </div>
 
 <script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var Chart1 = echarts.init(document.getElementById('mainOne'));
-    var Chart2 = echarts.init(document.getElementById('mainTwo'));
-
-    Chart1.setOption(option1());
-    Chart2.setOption(option2());
+    let num = 3;
+    let Chart = [];
+    for(let i = 0; i < num; i++){
+        Chart[i] = echarts.init(document.getElementById('main' + i));
+        Chart[i].setOption(funObj[i]());
+    }
 </script>
+<style>
+  .block {
+    display: inline-block;
+  }
+</style>
 </body>
 </html>

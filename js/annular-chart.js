@@ -1,5 +1,5 @@
-function option2() {
-    option = {
+funObj[1] = function () {
+    var option = {
         color:["#fff","#ccc"],
         grid:{
             show:true,
